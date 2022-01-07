@@ -2,6 +2,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
   }
+
   componentDidMount () {
     document.getElementById('editor').value = placeholder;
     this.updatePreview();
@@ -16,18 +17,21 @@ class App extends React.Component {
   
   render() {
     return (
-      <div>
-        <h1>Markdown Preveiwer</h1>
-        <div>
-          <h2>Markdown</h2>
-          <textarea
-            id='editor'
-            onKeyUp={this.updatePreview}
-          ></textarea>
-        </div>
-        <div>
-          <h2>Preview</h2>
-          <div id='preview'></div>
+      <div id="app-container" class="container-xxl">
+        <h1 id="header" class="text-white bg-secondary">Markdown Preveiwer</h1>
+        <div id="markdown-preview-container" class="row g-2 bg-light">
+          <div class="col-6">
+            <h3 class="text-center text-secondary">MARKDOWN</h3>
+            <textarea
+              id='editor'
+              onKeyUp={this.updatePreview}
+              class="form-control"
+            ></textarea>
+          </div>
+          <div class="col-6">
+            <h3 class="text-center text-secondary">Preview</h3>
+            <div id='preview' class="bg-white"></div>
+          </div>
         </div>
       </div>
     );

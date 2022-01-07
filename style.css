@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+#app-container {
+  background-color: white;
+  border: gray 2px solid
+}
+
+#header {
+  padding-left: 15px;
+}
+#markdown-preview-container {
+  margin: 0px;
+}
+
+textarea { 
+  min-height: 100%;
+}
