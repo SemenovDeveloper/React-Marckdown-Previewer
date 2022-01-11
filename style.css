@@ -16,6 +16,7 @@
   margin: 0;
   border-bottom: 2px #404747 solid;
   color: #e4e4e4;
+  background-color: #414141;
 }
 
 #markdown-preview-container {
@@ -54,8 +55,7 @@
 #editor, #preview {
   width: 96%;
   margin-left: 2%;
-  min-height: 500px;
-  max-height: 85vh;
+  height: 85vh;
   background-color: #e4e4e4;
 }
 
@@ -94,8 +94,12 @@
 .footer {
   height: 35px;
   color: #e4e4e4;
+  background-color: #414141;
   text-align: right;
   border-top: 2px #404747 solid;
+}
+.footer i {
+  margin-right: 5px;
 }
 .footer a {
   padding-right: 35px;

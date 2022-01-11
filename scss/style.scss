@@ -1,3 +1,4 @@
+$darkestAccent: #414141;
 $darkAccent: #404747;
 $lightAccent: #e4e4e4;
 $backgroundBase: #828888;
@@ -20,6 +21,7 @@ $backgroundBase: #828888;
   margin: 0;
   border-bottom: 2px $darkAccent solid;
   color: $lightAccent;
+  background-color: $darkestAccent;
 }
 
 #markdown-preview-container {
@@ -59,8 +61,7 @@ $backgroundBase: #828888;
 #editor, #preview {
   width: 96%;
   margin-left: 2%;
-  min-height: 500px;
-  max-height: 85vh;
+  height: 85vh;
   background-color: $lightAccent;
 }
 #preview {
@@ -103,8 +104,12 @@ $backgroundBase: #828888;
 .footer {
   height: 35px;
   color: $lightAccent;
+  background-color: $darkestAccent;
   text-align: right;
   border-top: 2px $darkAccent solid;
+  i {
+    margin-right: 5px;
+  }
   a {
     padding-right: 35px;
     text-decoration: none;

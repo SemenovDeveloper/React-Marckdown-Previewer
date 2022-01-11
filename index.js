@@ -38,7 +38,7 @@ class App extends React.Component {
             <div id='preview'></div>
           </div>
         </div>
-        <div class="footer"><a target="_blank" href="https://github.com/SemenovDeveloper">by SemenovDeveloper</a></div>
+        <div class="footer"><a id="footer" target="_blank" href="https://github.com/SemenovDeveloper"><i class="fab fa-github-square"></i>by SemenovDeveloper</a></div>
       </div>
     );
   }
