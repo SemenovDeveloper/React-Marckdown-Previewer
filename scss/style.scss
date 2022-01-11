@@ -1,0 +1,130 @@
+$darkAccent: #404747;
+$lightAccent: #e4e4e4;
+$backgroundBase: #828888;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#app-container {
+  background-color: $backgroundBase;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+#header {
+  padding-left: 15px;
+  margin: 0;
+  border-bottom: 2px $darkAccent solid;
+  color: $lightAccent;
+}
+
+#markdown-preview-container {
+
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+ }
+
+ #preview-container, #markdown-container {
+   width: 50%;
+ }
+
+#toolbar-markdown, #toolbar-preview{
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  h3{
+    font-size: 1.25rem;
+    padding-left: 30px;
+    color: $lightAccent
+  }
+  i {
+    margin: 3px 20px 3px 3px;
+    color: $lightAccent;
+    border: 2px $lightAccent solid;
+  }
+}
+
+#markdown-container {
+  border-right: 2px $darkAccent solid;
+}
+
+#editor, #preview {
+  width: 96%;
+  margin-left: 2%;
+  min-height: 500px;
+  max-height: 85vh;
+  background-color: $lightAccent;
+}
+#preview {
+  padding: 0 1rem;
+  overflow: scroll;
+  blockquote {
+    padding-left: 5px;
+    margin-left: 25px;
+  }
+
+  > p > code {
+    padding: 3px;
+  }
+
+  code {
+    background: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  pre {
+    display: block;
+    overflow: auto;
+    background: white;
+    padding: 5px;
+    line-height: 1.2;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+}
+
+.footer {
+  height: 35px;
+  color: $lightAccent;
+  text-align: right;
+  border-top: 2px $darkAccent solid;
+  a {
+    padding-right: 35px;
+    text-decoration: none;
+    color: $lightAccent;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #markdown-container {
+    border-right: none;
+  }
+  #markdown-preview-container {
+  flex-direction: column;
+  div {
+    width: 98%;
+  }
+  textarea { 
+    min-height: 400px;
+  }
+ }
+}
+

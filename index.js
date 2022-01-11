@@ -10,29 +10,35 @@ class App extends React.Component {
 
   updatePreview() {
     let inputText = document.getElementById('editor').value;
-    let markedinputText = marked.parse(inputText);
+    let markedInputText = marked.parse(inputText);
     let previewText = document.getElementById('preview');
-    previewText.innerHTML = markedinputText;
+    previewText.innerHTML = markedInputText;
   }
   
   render() {
     return (
-      <div id="app-container" class="container-xxl">
-        <h1 id="header" class="text-white bg-secondary">Markdown Preveiwer</h1>
-        <div id="markdown-preview-container" class="row g-2 bg-light">
-          <div class="col-6">
-            <h3 class="text-center text-secondary">MARKDOWN</h3>
+      <div id="app-container">
+        <h1 id="header">Markdown Preveiwer</h1>
+        <div id="markdown-preview-container">
+          <div id="markdown-container">
+            <div id="toolbar-markdown">
+              <h3>MARKDOWN</h3>
+            </div>
             <textarea
               id='editor'
               onKeyUp={this.updatePreview}
               class="form-control"
             ></textarea>
           </div>
-          <div class="col-6">
-            <h3 class="text-center text-secondary">Preview</h3>
-            <div id='preview' class="bg-white"></div>
+          <div id="preview-container">
+            <div id="toolbar-preview">
+              <h3>PREVIEW</h3>
+              <i class="fas fa-code"></i>
+            </div>
+            <div id='preview'></div>
           </div>
         </div>
+        <div class="footer"><a target="_blank" href="https://github.com/SemenovDeveloper">by SemenovDeveloper</a></div>
       </div>
     );
   }
