@@ -15,6 +15,14 @@ class App extends React.Component {
     previewText.innerHTML = markedInputText;
   }
   
+  copyText() {
+      var copyText = document.getElementById("editor");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(copyText.value);
+      alert("Copied the text: " + copyText.value);
+  } 
+
   render() {
     return (
       <div id="app-container">
@@ -23,6 +31,7 @@ class App extends React.Component {
           <div id="markdown-container">
             <div id="toolbar-markdown">
               <h3>MARKDOWN</h3>
+              <i class="far fa-copy" onclick={this.copyText}></i>
             </div>
             <textarea
               id='editor'
@@ -33,7 +42,6 @@ class App extends React.Component {
           <div id="preview-container">
             <div id="toolbar-preview">
               <h3>PREVIEW</h3>
-              <i class="fas fa-code"></i>
             </div>
             <div id='preview'></div>
           </div>

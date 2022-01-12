@@ -32,6 +32,7 @@
 }
 
 #toolbar-markdown, #toolbar-preview {
+  height: 35px;
   font-size: 1.25rem;
   display: flex;
   flex-direction: row;
@@ -45,7 +46,11 @@
 #toolbar-markdown i, #toolbar-preview i {
   margin: 3px 20px 3px 3px;
   color: #e4e4e4;
-  border: 2px #e4e4e4 solid;
+  font-size: 1.75rem;
+}
+#toolbar-markdown i:hover, #toolbar-preview i:hover {
+  color: #fefefe;
+  cursor: pointer;
 }
 
 #markdown-container {

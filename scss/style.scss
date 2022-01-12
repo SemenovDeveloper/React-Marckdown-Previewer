@@ -38,6 +38,7 @@ $backgroundBase: #828888;
  }
 
 #toolbar-markdown, #toolbar-preview{
+  height: 35px;
   font-size: 1.25rem;
   display: flex;
   flex-direction: row;
@@ -50,7 +51,11 @@ $backgroundBase: #828888;
   i {
     margin: 3px 20px 3px 3px;
     color: $lightAccent;
-    border: 2px $lightAccent solid;
+    font-size: 1.75rem;
+    &:hover {
+      color: lighten($lightAccent, 10%);
+      cursor: pointer;
+    }
   }
 }
 
