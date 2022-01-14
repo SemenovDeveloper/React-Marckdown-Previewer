@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 $darkestAccent: #414141;
 $darkAccent: #404747;
 $lightAccent: #e4e4e4;
@@ -7,6 +8,10 @@ $backgroundBase: #828888;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
 #app-container {
@@ -37,6 +42,10 @@ $backgroundBase: #828888;
    width: 50%;
  }
 
+ #markdown-container {
+  border-right: 2px $darkAccent solid;
+}
+
 #toolbar-markdown, #toolbar-preview{
   height: 35px;
   font-size: 1.25rem;
@@ -59,16 +68,13 @@ $backgroundBase: #828888;
   }
 }
 
-#markdown-container {
-  border-right: 2px $darkAccent solid;
-}
-
 #editor, #preview {
   width: 96%;
   margin-left: 2%;
   height: 85vh;
   background-color: $lightAccent;
 }
+
 #preview {
   padding: 0 1rem;
   overflow: scroll;
@@ -81,6 +87,9 @@ $backgroundBase: #828888;
     padding: 3px;
   }
 
+  ul, ol {
+    padding-left: 10px;
+  }
   code {
     background: white;
     font-size: 0.875rem;

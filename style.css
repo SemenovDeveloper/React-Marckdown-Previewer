@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
 #app-container {
@@ -31,6 +36,10 @@
   width: 50%;
 }
 
+#markdown-container {
+  border-right: 2px #404747 solid;
+}
+
 #toolbar-markdown, #toolbar-preview {
   height: 35px;
   font-size: 1.25rem;
@@ -53,10 +62,6 @@
   cursor: pointer;
 }
 
-#markdown-container {
-  border-right: 2px #404747 solid;
-}
-
 #editor, #preview {
   width: 96%;
   margin-left: 2%;
@@ -74,6 +79,9 @@
 }
 #preview > p > code {
   padding: 3px;
+}
+#preview ul, #preview ol {
+  padding-left: 10px;
 }
 #preview code {
   background: white;
